@@ -1,0 +1,1398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Eshwar Kumar - Computer Science student at Sukkur IBA University, Java, Python, C++, and DSA developer. Explore featured projects, certifications, and technical skills.">
+  <meta name="author" content="Eshwar Kumar">
+  <meta name="keywords" content="Eshwar Kumar, Sukkur IBA University, Portfolio, Software Engineer, Java Developer, DSA, C++, Python, Karachi, Pakistan">
+  
+  <title>Eshwar Kumar | Software Engineer & Computer Science Scholar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Interactive Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper" id="main-header">
+    <nav class="navbar glass-panel">
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <span class="logo-code">&lt;</span>
+        <span class="logo-text">Eshwar</span>
+        <span class="logo-accent">.dev</span>
+        <span class="logo-code">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm" id="btn-open-resume" aria-label="View Resume">
+          <i class="fa-solid fa-file-invoice"></i>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="brand-logo">
+        <span class="logo-text">Eshwar</span><span class="logo-accent">.dev</span>
+      </span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close Navigation Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-menu">
+      <li><a href="#hero" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#about" class="drawer-link"><i class="fa-solid fa-user-tie"></i> About</a></li>
+      <li><a href="#skills" class="drawer-link"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+      <li><a href="#projects" class="drawer-link"><i class="fa-solid fa-code-fork"></i> Projects</a></li>
+      <li><a href="#experience" class="drawer-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+      <li><a href="#certifications" class="drawer-link"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+      <li><a href="#contact" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-outline w-100" id="btn-drawer-resume">
+        <i class="fa-solid fa-file-arrow-down"></i> Quick View Resume
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-pill glass-panel reveal">
+            <span class="pulse-dot"></span>
+            <span class="status-text">Open to Software Engineering & Internship Opportunities</span>
+          </div>
+
+          <!-- Main Greeting -->
+          <h1 class="hero-title reveal">
+            Hello, I'm <br>
+            <span class="gradient-text">Eshwar Kumar</span>
+          </h1>
+
+          <!-- Animated Dynamic Subtitle -->
+          <div class="typewriter-container reveal">
+            <span class="typewriter-prefix">I build </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <!-- Elevator Pitch -->
+          <p class="hero-description reveal">
+            Computer Science scholar at <strong>Sukkur IBA University</strong> with a strong foundation in 
+            <strong>Data Structures & Algorithms</strong>, high-concurrency systems, and software engineering.
+            Crafting performant solutions using <strong>Java, C++, Python</strong>, and modern databases.
+          </p>
+
+          <!-- Quick Metadata Chips -->
+          <div class="hero-meta reveal">
+            <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> Karachi & Khairpur, Pakistan</span>
+            <span class="meta-chip"><i class="fa-solid fa-graduation-cap"></i> Sukkur IBA University (CGPA 3.17)</span>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group reveal">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Get In Touch</span>
+            </a>
+            <button class="btn btn-outline" id="hero-resume-btn">
+              <i class="fa-solid fa-download"></i>
+              <span>Curriculum Vitae</span>
+            </button>
+          </div>
+
+          <!-- Social Links Quick Bar -->
+          <div class="hero-socials reveal">
+            <a href="https://www.linkedin.com/in/eshwar-kumar-09ab902a2/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Eshwarmatani" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:keshwar662@gmail.com" class="social-icon" aria-label="Email Me">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+923110910780" class="social-icon" aria-label="Call Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <button class="social-icon copy-quick-btn" data-copy="keshwar662@gmail.com" title="Copy Email">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Avatar Showcase -->
+        <div class="hero-visual reveal">
+          <div class="avatar-orbit-container">
+            <!-- Glow background rings -->
+            <div class="glow-ring glow-ring-1"></div>
+            <div class="glow-ring glow-ring-2"></div>
+            
+            <!-- Avatar Frame -->
+            <div class="avatar-card glass-panel" id="hero-avatar-card">
+              <img src="assets/avatar.jpg" alt="Eshwar Kumar - Computer Science Engineer" class="avatar-img" id="avatar-img">
+              <div class="avatar-overlay"></div>
+              
+              <!-- Bottom status bar -->
+              <div class="avatar-badge glass-panel">
+                <i class="fa-solid fa-terminal text-cyan"></i>
+                <span>BS Computer Science @ SIBA</span>
+              </div>
+            </div>
+
+            <!-- Orbiting Interactive Tech Badges -->
+            <div class="floating-badge badge-java" title="Java & OOP">
+              <i class="fa-brands fa-java"></i>
+              <span>Java</span>
+            </div>
+            <div class="floating-badge badge-python" title="Python & Data Analytics">
+              <i class="fa-brands fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="floating-badge badge-cpp" title="C++ & Low-Level DSA">
+              <i class="fa-solid fa-code"></i>
+              <span>C++</span>
+            </div>
+            <div class="floating-badge badge-sql" title="Relational Database Systems">
+              <i class="fa-solid fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="floating-badge badge-dsa" title="Algorithms & Heaps">
+              <i class="fa-solid fa-sitemap"></i>
+              <span>DSA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY STATS COUNTERS -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid glass-panel reveal">
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-award"></i></div>
+            <div class="stat-details">
+              <div class="stat-number" data-target="3.17">3.17</div>
+              <div class="stat-label">University CGPA</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="stat-details">
+              <div class="stat-number" data-target="5">5+</div>
+              <div class="stat-label">Flagship Projects</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-certificate"></i></div>
+            <div class="stat-details">
+              <div class="stat-number" data-target="5">5+</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-cubes-stacked"></i></div>
+            <div class="stat-details">
+              <div class="stat-number" data-target="12">12+</div>
+              <div class="stat-label">Core Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME & EDUCATION SECTION -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-badge">Get To Know Me</span>
+          <h2 class="section-title">Academic Journey & <span class="gradient-text">Core Philosophy</span></h2>
+          <p class="section-subtitle">Bridging theoretical computer science with practical, scalable applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Column -->
+          <div class="about-bio glass-panel reveal">
+            <div class="bio-header">
+              <div class="bio-avatar-mini">
+                <img src="assets/avatar.jpg" alt="Eshwar Kumar">
+              </div>
+              <div>
+                <h3 class="bio-name">Eshwar Kumar</h3>
+                <span class="bio-tag">Software Engineer & Problem Solver</span>
+              </div>
+            </div>
+            
+            <p class="bio-text">
+              I am an aspiring Software Engineer currently pursuing my <strong>Bachelor of Science in Computer Science</strong> 
+              at the prestigious <strong>Sukkur IBA University</strong>. My passion lies in designing clean, scalable software, 
+              delving into complex algorithmic problem-solving, and building resilient database architectures.
+            </p>
+            <p class="bio-text">
+              From building <strong>Java-based real-time weather analytics</strong> with custom Tries and Min-Heaps to 
+              architecting transactional <strong>ATM Banking Systems with MySQL</strong> and developing interactive <strong>C++ games</strong> 
+              with Windows API feedback, I enjoy exploring the depths of computer science.
+            </p>
+
+            <div class="highlight-boxes">
+              <div class="highlight-box">
+                <i class="fa-solid fa-shield-halved text-cyan"></i>
+                <div>
+                  <h4>Network & Data Security</h4>
+                  <p>Coursework in cryptography, network defense & DBMS integrity.</p>
+                </div>
+              </div>
+              <div class="highlight-box">
+                <i class="fa-solid fa-microchip text-violet"></i>
+                <div>
+                  <h4>Algorithm Engineering</h4>
+                  <p>Strong mastery of custom heaps, tries, trees & dynamic programming.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education & Milestones Column -->
+          <div class="about-education">
+            <div class="timeline-title-wrap reveal">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h3>Education & Academics</h3>
+            </div>
+
+            <div class="timeline">
+              <!-- Sukkur IBA University -->
+              <div class="timeline-item glass-panel reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-header">
+                  <span class="timeline-period">08/2024 – 05/2028 (Expected)</span>
+                  <span class="badge-grade">CGPA: 3.17</span>
+                </div>
+                <h4 class="timeline-degree">Bachelor of Science in Computer Science (BS CS)</h4>
+                <div class="timeline-institution">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <span>Sukkur IBA University (SIBA)</span>
+                </div>
+                <p class="timeline-desc">
+                  Key Coursework: Data Structures & Algorithms, Object-Oriented Programming (OOP), 
+                  Database Management Systems (DBMS), Network Security, Artificial Intelligence, and Computer Networks.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">Khairpur / Sukkur, Pakistan</span>
+                  <span class="tech-tag">SIBA Merit</span>
+                </div>
+              </div>
+
+              <!-- Superior Science College -->
+              <div class="timeline-item glass-panel reveal">
+                <div class="timeline-marker"></div>
+                <div class="timeline-header">
+                  <span class="timeline-period">05/2020 – 05/2022</span>
+                  <span class="badge-grade">Score: 78%</span>
+                </div>
+                <h4 class="timeline-degree">Higher Secondary Certificate (HSC) - Pre-Engineering</h4>
+                <div class="timeline-institution">
+                  <i class="fa-solid fa-school"></i>
+                  <span>Superior Science College</span>
+                </div>
+                <p class="timeline-desc">
+                  Board of Intermediate & Secondary Education (BISE). Strong foundation in Advanced Mathematics, 
+                  Physics, and Analytical Thinking.
+                </p>
+                <div class="timeline-tags">
+                  <span class="tech-tag">Khairpur, Sindh</span>
+                  <span class="tech-tag">BISE Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS & EXPERTISE -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-badge">Capabilities</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skill Arsenal</span></h2>
+          <p class="section-subtitle">Proficiencies cultivated across academic coursework, projects, and certifications.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls reveal">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="lang">Languages</button>
+          <button class="filter-btn" data-filter="frameworks">Frameworks & DB</button>
+          <button class="filter-btn" data-filter="core">Core CS & Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Java -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="lang">
+            <div class="skill-icon-box java-bg">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Java</h3>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">OOP, Swing GUI, Concurrency, API integrations & Custom DSA implementation.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="lang">
+            <div class="skill-icon-box python-bg">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Python</h3>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Data Analytics, automation scripts, algorithms, and AI/ML exploration.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+            </div>
+          </div>
+
+          <!-- C++ -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="lang">
+            <div class="skill-icon-box cpp-bg">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>C++</h3>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Memory management, low-level data structures, Windows API & console UI systems.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="lang">
+            <div class="skill-icon-box js-bg">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>JavaScript</h3>
+                <span class="skill-level">Skilled</span>
+              </div>
+              <p class="skill-desc">Modern ES6+, DOM manipulation, asynchronous programming, interactive web interfaces.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+            </div>
+          </div>
+
+          <!-- SQL / MySQL -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="frameworks">
+            <div class="skill-icon-box sql-bg">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>SQL & MySQL</h3>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Relational schema design, complex joins, indexing, ACID transactions & audit trails.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <!-- MongoDB / NoSQL -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="frameworks">
+            <div class="skill-icon-box mongo-bg">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>MongoDB (NoSQL)</h3>
+                <span class="skill-level">Skilled</span>
+              </div>
+              <p class="skill-desc">Document storage, aggregation pipelines, schema validation & JSON queries.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 78%;"></div></div>
+            </div>
+          </div>
+
+          <!-- ReactJS -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="frameworks">
+            <div class="skill-icon-box react-bg">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>ReactJS</h3>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <p class="skill-desc">Component-driven architecture, hooks, state handling & responsive single page apps.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Flutter -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="frameworks">
+            <div class="skill-icon-box flutter-bg">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Flutter</h3>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <p class="skill-desc">Cross-platform mobile UI development, widget lifecycle & Dart integrations.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Data Structures & Algorithms -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="core">
+            <div class="skill-icon-box dsa-bg">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Data Structures & DSA</h3>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Tries, Min/Max-Heaps, Binary Search Trees, Graphs, Sorting & asymptotic analysis.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Network Security & DBMS -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="core">
+            <div class="skill-icon-box sec-bg">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Network Security & DBMS</h3>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">OSI Model, protocol security, normal forms, transaction isolation & access controls.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Artificial Intelligence -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="core">
+            <div class="skill-icon-box ai-bg">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Artificial Intelligence</h3>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <p class="skill-desc">Search algorithms, heuristic reasoning, knowledge representation & Prompting Essentials.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Developer Tools (Git, Linux, IDEs) -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="core">
+            <div class="skill-icon-box tools-bg">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Developer Tools</h3>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Linux CLI, Git & GitHub, IntelliJ IDEA Ultimate, VS Code, Android Studio.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <!-- HTML5 -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="frameworks">
+            <div class="skill-icon-box html-bg">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>HTML / HTML5</h3>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Semantic document layouts, accessibility (ARIA), modern DOM structure & SEO best practices.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="frameworks">
+            <div class="skill-icon-box css-bg">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>CSS / CSS3</h3>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <p class="skill-desc">Flexbox, CSS Grid, custom properties, glassmorphism, responsive media & keyframe animations.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Networking -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="core">
+            <div class="skill-icon-box net-bg">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Networking</h3>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">OSI Model, TCP/IP stack, socket programming, HTTP/HTTPS, routing protocols & subnetting.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 84%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Machine Learning (ML) -->
+          <div class="skill-card glass-panel tilt-card reveal" data-category="core">
+            <div class="skill-icon-box ml-bg">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="skill-info">
+              <div class="skill-name-row">
+                <h3>Machine Learning (ML)</h3>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <p class="skill-desc">Supervised/unsupervised models, computer vision CNNs, Scikit-Learn & predictive analytics.</p>
+              <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-badge">Portfolio Highlights</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Software Projects</span></h2>
+          <p class="section-subtitle">Real-world applications showcasing algorithmic efficiency, robust architecture, and polished UX.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Weather Tracking App -->
+          <article class="project-card glass-panel tilt-card reveal" id="project-weather">
+            <div class="project-image-wrap">
+              <img src="assets/weather-app.jpg" alt="Weather Tracking App Screenshot" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-btn" data-project="weather">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Details
+                </button>
+                <a href="https://github.com/Eshwarmatani/Weather-Track-App" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+              <span class="project-date-pill"><i class="fa-regular fa-calendar"></i> 11/2025</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="badge-tech">Java Swing</span>
+                <span class="badge-tech">API Integration</span>
+                <span class="badge-tech">Custom DSA (Trie)</span>
+                <span class="badge-tech">Min-Heap</span>
+              </div>
+
+              <h3 class="project-title">Weather Tracking App</h3>
+              <p class="project-summary">
+                A Java-based desktop weather dashboard utilizing advanced data structures like <strong>Tries</strong> for 
+                sub-millisecond city autocomplete and <strong>Min-Heaps</strong> to dynamically monitor global temperature extremes. 
+                Integrates REST APIs for live forecasting and persistent search history.
+              </p>
+
+              <div class="project-features-preview">
+                <div class="feature-item"><i class="fa-solid fa-bolt text-cyan"></i> Instant Trie-based prefix autocomplete</div>
+                <div class="feature-item"><i class="fa-solid fa-chart-line text-violet"></i> Min-Heap tracking for temperature extremes</div>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/Eshwarmatani/Weather-Track-App" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <span>Source Code</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <button class="project-expand-link project-modal-btn" data-project="weather">
+                  <span>Architecture</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Bank Management System (ATM) -->
+          <article class="project-card glass-panel tilt-card reveal" id="project-bank">
+            <div class="project-image-wrap">
+              <img src="assets/bank-atm.jpg" alt="Bank Management System Screenshot" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-btn" data-project="bank">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Details
+                </button>
+                <a href="https://github.com/Eshwarmatani/Bank-Management-Project-with-connection-of-database" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+              <span class="project-date-pill"><i class="fa-regular fa-calendar"></i> 05/2025</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="badge-tech">Java Swing</span>
+                <span class="badge-tech">MySQL Database</span>
+                <span class="badge-tech">ACID Transactions</span>
+                <span class="badge-tech">Security</span>
+              </div>
+
+              <h3 class="project-title">Bank Management System (ATM)</h3>
+              <p class="project-summary">
+                A Java desktop banking application simulating core ATM workflows: secure account registration, 
+                real-time balance inquiries, and automated transactions. Implements relational database management with 
+                MySQL to manage deposits, withdrawals, PIN updates, and digital audit ledgers.
+              </p>
+
+              <div class="project-features-preview">
+                <div class="feature-item"><i class="fa-solid fa-shield-check text-emerald"></i> Cryptographic PIN validation</div>
+                <div class="feature-item"><i class="fa-solid fa-receipt text-cyan"></i> Tamper-proof digital transaction audit trail</div>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/Eshwarmatani/Bank-Management-Project-with-connection-of-database" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <span>Source Code</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <button class="project-expand-link project-modal-btn" data-project="bank">
+                  <span>Architecture</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Word Guessing Game -->
+          <article class="project-card glass-panel tilt-card reveal" id="project-wordgame">
+            <div class="project-image-wrap">
+              <img src="assets/word-game.jpg" alt="Word Guessing Game Screenshot" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-btn" data-project="wordgame">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Details
+                </button>
+                <button class="btn btn-sm btn-glass project-modal-btn" data-project="wordgame">
+                  <i class="fa-solid fa-gamepad"></i> Game Specs
+                </button>
+              </div>
+              <span class="project-date-pill"><i class="fa-regular fa-calendar"></i> 11/2024</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="badge-tech">C++</span>
+                <span class="badge-tech">Windows API</span>
+                <span class="badge-tech">Algorithmic Hints</span>
+                <span class="badge-tech">Game Logic</span>
+              </div>
+
+              <h3 class="project-title">Word Guessing Game</h3>
+              <p class="project-summary">
+                A console arcade game developed in C++ challenging players across 7 distinct categories including 
+                Fruits, Animals, Countries, and Seasons. Features a dynamic hint engine, real-time letter validation, 
+                and color-coded feedback utilizing the native Windows API for rich visual cues.
+              </p>
+
+              <div class="project-features-preview">
+                <div class="feature-item"><i class="fa-solid fa-palette text-amber"></i> Windows API color-coded feedback matrix</div>
+                <div class="feature-item"><i class="fa-solid fa-lightbulb text-violet"></i> Dynamic heuristic hint calculation system</div>
+              </div>
+
+              <div class="project-footer">
+                <button class="project-link project-modal-btn" data-project="wordgame">
+                  <span>Game Architecture</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <button class="project-expand-link project-modal-btn" data-project="wordgame">
+                  <span>Explore Logic</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: AI Weather & Soil Crop Advisor and Disease Detector -->
+          <article class="project-card glass-panel tilt-card reveal" id="project-cropadvisor">
+            <div class="project-image-wrap">
+              <img src="assets/crop-advisor.jpg" alt="AI Weather and Soil Crop Advisor & Disease Detector" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-btn" data-project="cropadvisor">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Details
+                </button>
+                <button class="btn btn-sm btn-glass project-modal-btn" data-project="cropadvisor">
+                  <i class="fa-solid fa-microchip"></i> AI Specs
+                </button>
+              </div>
+              <span class="project-date-pill"><i class="fa-regular fa-calendar"></i> 01/2026</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="badge-tech">Python & ML</span>
+                <span class="badge-tech">Computer Vision (CNN)</span>
+                <span class="badge-tech">Soil NPK Health</span>
+                <span class="badge-tech">Weather API</span>
+              </div>
+
+              <h3 class="project-title">AI Crop Advisor & Disease Detector</h3>
+              <p class="project-summary">
+                An intelligent agro-tech AI platform that analyzes real-time weather forecasts and soil health 
+                parameters (NPK, moisture, pH) to recommend optimal crops, paired with a Deep Learning computer vision 
+                model detecting plant leaf diseases with treatment prescriptions.
+              </p>
+
+              <div class="project-features-preview">
+                <div class="feature-item"><i class="fa-solid fa-leaf text-emerald"></i> Deep Learning CNN for foliar crop leaf disease detection</div>
+                <div class="feature-item"><i class="fa-solid fa-cloud-sun-rain text-cyan"></i> Real-time weather forecasting & soil NPK advisory engine</div>
+              </div>
+
+              <div class="project-footer">
+                <button class="project-link project-modal-btn" data-project="cropadvisor">
+                  <span>AI Architecture</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <button class="project-expand-link project-modal-btn" data-project="cropadvisor">
+                  <span>Explore Model</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Trillingo Translator -->
+          <article class="project-card glass-panel tilt-card reveal" id="project-trillingo">
+            <div class="project-image-wrap">
+              <img src="assets/trillingo.jpg" alt="Trillingo Translator App Screenshot" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary project-modal-btn" data-project="trillingo">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> View Details
+                </button>
+                <button class="btn btn-sm btn-glass project-modal-btn" data-project="trillingo">
+                  <i class="fa-solid fa-language"></i> Translation Engine
+                </button>
+              </div>
+              <span class="project-date-pill"><i class="fa-regular fa-calendar"></i> 12/2025</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="badge-tech">Multilingual NLP</span>
+                <span class="badge-tech">JavaScript / Python</span>
+                <span class="badge-tech">Speech Waveform API</span>
+                <span class="badge-tech">Interactive UI</span>
+              </div>
+
+              <h3 class="project-title">Trillingo Translator</h3>
+              <p class="project-summary">
+                A modern multilingual translation and language acquisition platform combining neural machine translation 
+                with interactive vocabulary flashcards, real-time speech pronunciation waveforms, and context-aware 
+                phrase recommendations across global languages.
+              </p>
+
+              <div class="project-features-preview">
+                <div class="feature-item"><i class="fa-solid fa-wave-square text-violet"></i> Real-time bidirectional translation with audio waveforms</div>
+                <div class="feature-item"><i class="fa-solid fa-book-bookmark text-cyan"></i> Dynamic phrasebook & contextual vocabulary builder</div>
+              </div>
+
+              <div class="project-footer">
+                <button class="project-link project-modal-btn" data-project="trillingo">
+                  <span>System Architecture</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <button class="project-expand-link project-modal-btn" data-project="trillingo">
+                  <span>Explore Features</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL SIMULATION & EXTRACURRICULAR EXPERIENCE -->
+    <section class="experience-section section-padding" id="experience">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-badge">Professional Growth</span>
+          <h2 class="section-title">Experience & <span class="gradient-text">Simulations</span></h2>
+          <p class="section-subtitle">Real-world industry exposure, technology simulations, and collaborative programs.</p>
+        </div>
+
+        <div class="experience-showcase glass-panel reveal">
+          <div class="exp-media">
+            <img src="assets/deloitte-tech.jpg" alt="Deloitte Australia Tech Job Simulation" class="exp-img">
+            <div class="exp-badge">
+              <i class="fa-solid fa-building"></i> Deloitte Australia
+            </div>
+          </div>
+
+          <div class="exp-content">
+            <div class="exp-header-meta">
+              <span class="exp-tag">Industry Job Simulation</span>
+              <span class="exp-date"><i class="fa-regular fa-calendar-check"></i> 04/2026</span>
+            </div>
+            
+            <h3 class="exp-role">Technology Job Simulation Consultant</h3>
+            <div class="exp-company">
+              <span class="text-white">Deloitte Australia</span> &bull; Virtual Simulation
+            </div>
+
+            <p class="exp-summary">
+              Completed an intensive, hands-on simulation tackling real-world enterprise consulting challenges. 
+              Mirrored Deloitte’s technology workflows by formulating strategic architecture proposals, writing software 
+              prototypes, performing data analysis, and evaluating client technology stacks.
+            </p>
+
+            <ul class="exp-bullets">
+              <li>
+                <i class="fa-solid fa-check text-cyan"></i>
+                <span>Analyzed enterprise data pipelines and presented architectural optimizations for cloud scalability.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-cyan"></i>
+                <span>Drafted client-facing technical strategies aligning software capabilities with business goals.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-cyan"></i>
+                <span>Evaluated cybersecurity, reliability, and code review criteria under consulting standards.</span>
+              </li>
+            </ul>
+
+            <div class="exp-footer-actions">
+              <span class="badge-verified"><i class="fa-solid fa-circle-check"></i> Completion Verified</span>
+              <a href="#certifications" class="btn btn-sm btn-outline">
+                <span>View Certificate</span>
+                <i class="fa-solid fa-certificate"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Extracurricular Cards -->
+        <div class="extracurricular-grid">
+          <div class="extra-card glass-panel reveal">
+            <div class="extra-icon-box"><i class="fa-solid fa-rocket text-cyan"></i></div>
+            <div class="extra-details">
+              <h4>League of Launchers — Season 2</h4>
+              <p>Collaborative leadership and tech acceleration initiative sharpening problem-solving, project management, and rapid ideation.</p>
+              <span class="badge-tech">Project Management & Planning</span>
+            </div>
+          </div>
+
+          <div class="extra-card glass-panel reveal">
+            <div class="extra-icon-box"><i class="fa-solid fa-wand-magic-sparkles text-violet"></i></div>
+            <div class="extra-details">
+              <h4>Google Prompting Essentials</h4>
+              <p>Specialized training by Google on prompt engineering techniques, LLM evaluation, and generative AI productivity patterns.</p>
+              <span class="badge-tech">Generative AI & LLMs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SHOWCASE -->
+    <section class="cert-section section-padding" id="certifications">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-badge">Credentials</span>
+          <h2 class="section-title">Verified <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Industry-recognized credentials validating foundational and advanced computer science skills.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Google Data Analytics -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon google-color"><i class="fa-brands fa-google"></i></div>
+              <span class="cert-issuer">Coursera</span>
+            </div>
+            <h3 class="cert-title">Google Data Analytics</h3>
+            <p class="cert-desc">Data cleaning, analysis, SQL queries, visualizations, and data-driven decision frameworks.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-cyan"></i> Verified Credential</span>
+              <span class="cert-chip">Google Professional</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Deloitte Australia -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon deloitte-color"><i class="fa-solid fa-briefcase"></i></div>
+              <span class="cert-issuer">Deloitte Australia</span>
+            </div>
+            <h3 class="cert-title">Technology Job Simulation</h3>
+            <p class="cert-desc">Enterprise software consulting, coding, data analysis, and technical client advisory.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-emerald"></i> Verified Completion</span>
+              <span class="cert-chip">Enterprise Consulting</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: Google Prompting Essentials -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon google-color"><i class="fa-solid fa-brain"></i></div>
+              <span class="cert-issuer">Google</span>
+            </div>
+            <h3 class="cert-title">Google Prompting Essentials</h3>
+            <p class="cert-desc">Mastering generative AI principles, prompt framing, and multi-shot reasoning methods.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-cyan"></i> Verified Credential</span>
+              <span class="cert-chip">AI & LLMs</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: Python Fundamentals -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon python-color"><i class="fa-brands fa-python"></i></div>
+              <span class="cert-issuer">Udemy</span>
+            </div>
+            <h3 class="cert-title">Python Fundamentals</h3>
+            <p class="cert-desc">Core syntax, data structures, modular design, file handling, and algorithmic problem-solving.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-amber"></i> Verified Credential</span>
+              <span class="cert-chip">Software Development</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: Java Programming -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon java-color"><i class="fa-brands fa-java"></i></div>
+              <span class="cert-issuer">Certification</span>
+            </div>
+            <h3 class="cert-title">Java Programming & OOP</h3>
+            <p class="cert-desc">Object-oriented paradigms, multithreading, collections framework, and Swing GUI systems.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-cyan"></i> Verified Credential</span>
+              <span class="cert-chip">Backend & Systems</span>
+            </div>
+          </div>
+
+          <!-- Cert 6: SQL & Databases -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon sql-color"><i class="fa-solid fa-database"></i></div>
+              <span class="cert-issuer">Certification</span>
+            </div>
+            <h3 class="cert-title">SQL & Relational DBs</h3>
+            <p class="cert-desc">Advanced queries, subqueries, relational schema design, indexing, and transactional integrity.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-violet"></i> Verified Credential</span>
+              <span class="cert-chip">Database Engineering</span>
+            </div>
+          </div>
+
+          <!-- Cert 7: MongoDB Basics -->
+          <div class="cert-card glass-panel tilt-card reveal">
+            <div class="cert-top">
+              <div class="cert-org-icon mongo-color"><i class="fa-solid fa-leaf"></i></div>
+              <span class="cert-issuer">MongoDB University</span>
+            </div>
+            <h3 class="cert-title">MongoDB Basics</h3>
+            <p class="cert-desc">NoSQL document database architecture, CRUD operations, indexing, and aggregation pipelines.</p>
+            <div class="cert-footer">
+              <span class="cert-badge"><i class="fa-solid fa-circle-check text-emerald"></i> Verified Credential</span>
+              <span class="cert-chip">NoSQL Data Stores</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle">Feel free to reach out for software engineering internships, collaborative projects, or tech discussions.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col">
+            <!-- Email Card -->
+            <div class="contact-card glass-panel reveal">
+              <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-card-content">
+                <span class="contact-label">Email Directly</span>
+                <a href="mailto:keshwar662@gmail.com" class="contact-value">keshwar662@gmail.com</a>
+              </div>
+              <button class="copy-btn" data-copy="keshwar662@gmail.com" aria-label="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+                <span class="tooltip">Copy</span>
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card glass-panel reveal">
+              <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-card-content">
+                <span class="contact-label">Phone & WhatsApp</span>
+                <a href="tel:+923110910780" class="contact-value">+92-3110910780</a>
+              </div>
+              <button class="copy-btn" data-copy="+923110910780" aria-label="Copy Phone Number">
+                <i class="fa-regular fa-copy"></i>
+                <span class="tooltip">Copy</span>
+              </button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-card glass-panel reveal">
+              <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-card-content">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Karachi & Khairpur, Sindh, Pakistan</span>
+              </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="contact-card glass-panel reveal">
+              <div class="contact-card-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="contact-card-content">
+                <span class="contact-label">LinkedIn Profile</span>
+                <a href="https://www.linkedin.com/in/eshwar-kumar-09ab902a2/" target="_blank" rel="noopener noreferrer" class="contact-value">
+                  eshwar-kumar-09ab902a2
+                </a>
+              </div>
+              <a href="https://www.linkedin.com/in/eshwar-kumar-09ab902a2/" target="_blank" rel="noopener noreferrer" class="copy-btn" aria-label="Open LinkedIn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="contact-card glass-panel reveal">
+              <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="contact-card-content">
+                <span class="contact-label">GitHub Repository</span>
+                <a href="https://github.com/Eshwarmatani" target="_blank" rel="noopener noreferrer" class="contact-value">
+                  github.com/Eshwarmatani
+                </a>
+              </div>
+              <a href="https://github.com/Eshwarmatani" target="_blank" rel="noopener noreferrer" class="copy-btn" aria-label="Open GitHub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <div class="contact-form-col glass-panel reveal">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">Have an opportunity or inquiry? Drop me a line and I'll respond swiftly.</p>
+
+            <form id="portfolio-contact-form" class="contact-form" action="https://formsubmit.co/fab2ca80f197a66ff1a4ed2419e27c57" method="POST">
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" id="hidden-email-subject" value="New Portfolio Message for Eshwar Kumar">
+              <input type="hidden" name="_replyto" id="hidden-email-replyto" value="">
+              <input type="hidden" name="Sender_Email_Address" id="hidden-sender-email" value="">
+              <input type="hidden" name="Sender_Full_Name" id="hidden-sender-name" value="">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Full Name</label>
+                  <div class="input-wrap">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email Address</label>
+                  <div class="input-wrap">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject / Role</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-tag"></i>
+                  <input type="text" id="contact-subject" name="subject" placeholder="Software Engineering Internship / Project Inquiry" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Your Message</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fa-regular fa-comment-dots"></i>
+                  <textarea id="contact-message" name="message" rows="5" placeholder="Hi Eshwar, I would love to discuss an opportunity..." required></textarea>
+                </div>
+              <!-- Dynamic Form Status Alert Box -->
+              <div id="form-status-alert" class="form-status-alert" style="display: none;"></div>
+
+              <div class="form-actions-group">
+                <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-form">
+                  <span>Send Message to Email</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <button type="button" class="btn btn-outline" id="btn-open-email-client" title="Compose directly in your preferred email client or Gmail">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <span>Open in Gmail / Mail App</span>
+                </button>
+              </div>
+
+              <div class="form-helper-note">
+                <i class="fa-solid fa-circle-check text-cyan"></i>
+                <span>Directly delivers to <strong>keshwar662@gmail.com</strong> with sender email and full message details.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <span class="logo-code">&lt;</span>
+            <span class="logo-text">Eshwar</span>
+            <span class="logo-accent">.dev</span>
+            <span class="logo-code">/&gt;</span>
+          </a>
+          <p class="footer-bio">
+            Computer Science scholar at Sukkur IBA University. Passionate about Java, Python, C++, Data Structures, 
+            and modern scalable software.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Connect</h4>
+          <p><i class="fa-solid fa-envelope"></i> keshwar662@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +92-3110910780</p>
+          <p><i class="fa-solid fa-location-dot"></i> Karachi & Khairpur, Sindh</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Eshwar Kumar. Built with precision, modern animations & passion.</p>
+        <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-file-lines text-cyan"></i>
+          <h3>Eshwar Kumar — Curriculum Vitae</h3>
+        </div>
+        <button class="modal-close" id="resume-modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body resume-modal-body">
+        <div class="resume-preview-card">
+          <div class="resume-header-block">
+            <h2>ESHWAR KUMAR</h2>
+            <p class="resume-sub">Karachi / Khairpur, Pakistan | +92-3110910780 | keshwar662@gmail.com</p>
+            <p class="resume-sub">
+              <a href="https://www.linkedin.com/in/eshwar-kumar-09ab902a2/" target="_blank">LinkedIn Profile</a> | 
+              <a href="https://github.com/Eshwarmatani" target="_blank">GitHub Profile</a>
+            </p>
+          </div>
+
+          <div class="resume-section-block">
+            <h3><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h3>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Sukkur IBA University</strong>
+                <span>08/2024 – 05/2028</span>
+              </div>
+              <div>Computer Science — CGPA: <strong>3.17</strong></div>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Superior Science College</strong>
+                <span>05/2020 – 05/2022</span>
+              </div>
+              <div>HSC (BISE) — Percentage: <strong>78%</strong></div>
+            </div>
+          </div>
+
+          <div class="resume-section-block">
+            <h3><i class="fa-solid fa-laptop-code"></i> FEATURED PROJECTS</h3>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Weather Tracking App</strong>
+                <span>Java Swing, API, Trie, Min-Heap</span>
+              </div>
+              <p>Real-time weather dashboard with sub-millisecond Trie city autocomplete and Min-Heap tracking global temperature extremes.</p>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Bank Management System (ATM)</strong>
+                <span>Java Swing, MySQL, Security</span>
+              </div>
+              <p>Full ATM simulation handling account registration, transactions, balance inquiries, and relational database audit logs.</p>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Word Guessing Game</strong>
+                <span>C++, Windows API</span>
+              </div>
+              <p>Console game across 7 categories with dynamic hints, letter validation, and color-coded Windows API feedback.</p>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>AI Weather & Soil Crop Advisor & Disease Detector</strong>
+                <span>Python, ML, CNN, Weather API, NPK</span>
+              </div>
+              <p>Agro-tech AI system with computer vision leaf scan diagnostics and NPK soil health + weather crop recommendations.</p>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Trillingo Translator</strong>
+                <span>NLP, Speech Waveform, JS / Python</span>
+              </div>
+              <p>Multilingual translation and vocabulary acquisition platform featuring real-time audio waveforms and phrasebooks.</p>
+            </div>
+          </div>
+
+          <div class="resume-section-block">
+            <h3><i class="fa-solid fa-code"></i> TECHNICAL SKILLS & LANGUAGES</h3>
+            <p><strong>Languages & Core:</strong> Java, Python, C++, JavaScript, HTML5, CSS3, SQL, NoSQL (MongoDB), Networking, Machine Learning (ML), DSA, DBMS, Network Security, OOP</p>
+          </div>
+
+          <div class="resume-section-block">
+            <h3><i class="fa-solid fa-briefcase"></i> EXPERIENCE & EXTRACURRICULAR</h3>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Deloitte Australia — Technology Job Simulation</strong>
+                <span>04/2026</span>
+              </div>
+              <p>Hands-on simulation tackling consulting, coding, data analysis, and enterprise client strategies.</p>
+            </div>
+          </div>
+
+          <div class="resume-section-block">
+            <h3><i class="fa-solid fa-certificate"></i> CERTIFICATIONS</h3>
+            <p>Google Data Analytics (Coursera) &bull; Java &bull; Python Fundamentals (Udemy) &bull; SQL &bull; MongoDB Basics &bull; Google Prompting Essentials</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="window.print()">
+          <i class="fa-solid fa-print"></i> Print / Save PDF
+        </button>
+        <a href="mailto:keshwar662@gmail.com?subject=Resume%20Inquiry%20-%20Eshwar%20Kumar" class="btn btn-primary">
+          <i class="fa-solid fa-envelope"></i> Request Full PDF via Email
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container glass-panel modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-code text-cyan" id="project-modal-icon"></i>
+          <h3 id="project-modal-title">Project Architecture Deep Dive</h3>
+        </div>
+        <button class="modal-close" id="project-modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="project-modal-body">
+        <!-- Injected via JavaScript based on selected project -->
+      </div>
+      <div class="modal-footer" id="project-modal-footer">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>
